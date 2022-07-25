@@ -10,8 +10,6 @@ Find information above for running tests
    - `cd` to root directory of the project
    - Install Node modules using:
    ```
-   npm install
-   ```
    - Install Cypress 10.3.0 version using:
    ```
    npm install cypress
