@@ -7,12 +7,7 @@ describe('network', () => {
     })
 
     it('addToCart', () => {
-        cy.request({
-            method: "POST",
-            url: "https://api.demoblaze.com/view",
-            body: {"id": "1"}
-        }).its("body.title").should("equal", "Samsung galaxy s6");
-
+        cy.wait(1000)
         cy.getCookie("user").then((c) => {
             let cookie = "user=" + (c.value).toString();
             cy.request({
