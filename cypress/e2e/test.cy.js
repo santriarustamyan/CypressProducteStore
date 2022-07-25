@@ -9,7 +9,7 @@ describe('network', () => {
     it('addToCart', () => {
         cy.wait(1000)
         cy.getCookie("user").then((c) => {
-            let cookie = "user=" + (c.value).toString();
+            let cookie = "user=" + c.value.toString();
             cy.request({
                 method: "POST",
                 url: "https://api.demoblaze.com/addtocart",
